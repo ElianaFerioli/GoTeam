@@ -1,0 +1,136 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27-nov-2016, 20:52:39
+    Author     : eliana
+*/
+
+.sprite{
+    background-image: url("../img/spritesheet.png");
+    background-repeat: no-repeat; /*Si se pone no repeat hay que poner las coordenadas en negativo*/
+    width: 40px;
+    height: 40px;
+}
+.deporte1{		
+    background-position: 0px 3px;		
+}
+.deporte2{		
+    background-position: -120px -75px;		
+}
+.deporte3{		
+    background-position: -40px -117px;		
+}
+.deporte4{		
+    background-position: -80px -117px;		
+}
+.deporte5{		
+    background-position: -120px -117px;		
+}
+.deporte6{		
+    background-position: -160px 7px;		
+}
+.deporte7{		
+    background-position: -160px -33px;		
+}
+.deporte8{		
+    background-position: -160px -75px;		
+}
+.deporte8{		
+    background-position: -160px -75px;		
+}
+.deporte9{		
+    background-position: -160px -115px;		
+}
+.deporte10{		
+    background-position: -40px 5px;		
+}
+.deporte11{		
+    background-position: -80px 5px;		
+}
+.deporte12{		
+    background-position: -120px 5px;		
+}
+.deporte13{		
+    background-position: 0px -35px;		
+}
+.deporte14{		
+    background-position: -35px -35px;		
+}
+.deporte15{		
+    background-position: -70px -35px;		
+}
+.deporte16{		
+    background-position: -113px -35px;		
+}
+.deporte17{		
+    background-position: 0px -75px;		
+}
+.deporte18{		
+    background-position: -40px -75px;		
+}
+.deporte19{		
+    background-position: -80px -73px;		
+}
+div.page-header h1{
+    margin: 0px;
+    margin-bottom: 1%;
+}
+div.page-header{
+    margin-bottom: 0.5%;;
+}
+a.btn-warning{
+    margin-left: 5%;
+    margin-right: 10%;
+    font-size: 0.75em;
+}
+a.btn-danger{
+    font-size: 0.75em;
+}
+table.table-hover{
+    margin-top: 3%;
+    width: 97%;
+}
+select{
+    margin: 0.3%;
+}
+input{
+    margin: 0.3%;
+}
+#modificarEvento{
+    margin: 0.3%;
+}
+a.btn-primary{
+    float: right;
+}
+thead tr th{
+    cursor: pointer;
+}
+thead tr th:hover{
+    color: orange;
+}
+#formularioModificar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+#formularioModificar div{
+    width: 100%;
+}
+#formularioModificar div option{
+    width: 100%;
+}
+#formularioModificar *{
+    color: black;
+}
+#insertar{
+    display: flex;
+    flex-direction: column;
+    height: 130px;
+    flex-wrap: wrap;
+}

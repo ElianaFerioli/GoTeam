@@ -1,0 +1,921 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 21-may-2017, 13:20:21
+    Author     : eli
+*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab');
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: #F5F5F5;
+}
+
+header{
+    width: 100%;
+    height: 85px;
+    position: fixed;
+    top: 0px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 1px 1px 10px black;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 30;
+    
+}
+
+header #logoHeader{
+    width: 85px;
+    height: 75px;
+    background-image: url('../img/logo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-left: 1%;
+    cursor: pointer;
+    margin-right: 3%;
+}
+
+header #nombreUsuario{
+   font-family: 'Montserrat', sans-serif;
+   color: #993d00;
+   text-shadow: 1px 1px 5px black, 1px 1px 5px black, 1px 1px 5px black, 1px 1px 5px black;
+   font-size: 2.3em;
+   cursor: pointer;
+   text-decoration: none;
+}
+
+#nav{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+#nav a{
+    font-size: 1.3em;
+    text-decoration: none;
+    color: #B8B8B8;
+    font-family: 'Montserrat', sans-serif;
+    transition: color .35s linear;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 4%;
+}
+#nav a:hover{
+    color: #993d00;
+}
+.relleno{
+    width: 15%;
+}
+#crear{
+    position: absolute;
+    top: -20%;
+}
+.creaEventos{
+    margin-top: 10%;
+    margin-left: 3%;
+    width: 93%;
+    height: 350px;
+    background-color: rgba(245,245,245, 0.9);
+    box-shadow: 1px 1px 5px #A8A8A8, 1px 1px 5px #A8A8A8, 1px 1px 5px #A8A8A8, 1px 1px 5px #A8A8A8;
+}
+.creaEventosCabecera{
+    width: 100%;
+    height: 40px;
+    border-bottom: 0.3px solid #B8B8B8;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.creaEventosCabecera span{
+    font-size: 1.3em;
+    font-family: 'Montserrat', sans-serif;
+    color: #505050;
+}
+.creaEventosBody{
+    width: 100%;
+    height: 75%;
+    background-color: rgba(0,0,0, 0.8);
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#deporte, #instalacion, #pista, #nivel, #datepicker, #hora, #usuarios, #insertarEvento{
+    display: inline-block;
+    color: white;
+    border:none;
+    width: 15% !important;
+    height: 40px;
+    font-size: 1.2em;
+    border-radius: 2%;
+    text-align: center;
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 1px solid #993d00;
+    background-color: rgba(0,0,0, 0.2);
+    padding: 0 !important;
+}
+#deporte *, #instalacion *, #pista *, #nivel *{
+    background-color: rgba(0,0,0, 0.2);
+    color: white;
+}
+#deporte, #instalacion, #pista, #nivel, #datepicker, #hora{
+    margin-top: 2%;
+    cursor: pointer;
+}
+
+#deporte:focus, #instalacion:focus, #pista:focus, #nivel:focus, #datepicker:focus, #hora:focus {
+  border-color: grey;
+  outline: 0;
+}
+
+#insertarEvento{    
+    background-color: #993d00;
+    cursor: pointer;
+}
+#insertarEvento:hover{
+    border: 2px solid #993d00;
+    background-color: transparent;
+}
+.eventosAbiertos{
+    margin-top: 5%;
+    margin-left: 3%;
+    margin-bottom: 5%;
+    width: 93%;
+    height: 250px !important;
+    background-color: rgba(245,245,245, 0.9);
+    box-shadow: 1px 1px 5px #A8A8A8, 1px 1px 5px #A8A8A8, 1px 1px 5px #A8A8A8, 1px 1px 5px #A8A8A8;
+
+
+}
+.iconos{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    top: -35%;
+}
+.iconoDeporte{
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    background-position: center;
+}
+.icon1{
+    background-image: url('../img/sporticon1.png');
+}
+.icon2{
+    background-image: url('../img/sporticon2.png');
+}
+.icon3{
+    background-image: url('../img/sporticon3.png');
+}
+.icon4{
+    background-image: url('../img/sporticon4.png');
+}
+
+
+
+
+
+.eventosAbiertosCabecera{
+    width: 100%;
+    height: 40px;
+    border-bottom: 0.3px solid #B8B8B8;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.eventosAbiertosCabecera span{
+    font-size: 1.3em;
+    font-family: 'Montserrat', sans-serif;
+    color: #505050;
+}
+.eventosAbiertosBody{
+    width: 100%;
+    height: 209px !important;
+    overflow-y: scroll;
+}
+.participacionAbiertaEventos{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    
+}
+.participacionAbiertaEventos:hover{
+    background-color: rgba(120,120,120, 0.9);
+}
+.participacionAbiertaEventos span{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    color: #505050;
+    width: 30%;
+}
+ .opciones{
+    width: 10%;
+    height: 30px;
+    cursor: pointer;
+}
+.borrar{
+    background-image: url('../img/borrar.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.participacionAbiertaEventos .estadoEvento{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50% !important;
+}
+
+.deportes{
+    margin-top: 5%;
+    margin-left: 3%;
+    width: 93%;
+    height: 450px;
+    background-color: rgba(245,245,245, 0.9);
+    box-shadow: 1px 1px 5px #A8A8A8, 1px 1px 5px #A8A8A8, 1px 1px 5px #A8A8A8, 1px 1px 5px #A8A8A8;
+    box-sizing: border-box;
+}
+.deportesCabecera{
+    width: 100%;
+    height: 40px;
+    border-bottom: 0.3px solid #B8B8B8;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.deportesCabecera span{
+    font-size: 1.3em;
+    font-family: 'Montserrat', sans-serif;
+    color: #505050;
+}
+.deportesBody{
+    width: 100%;
+    height: 80%;
+    overflow-y: scroll;
+    text-align: center;
+}
+.deportesBody .deporte{
+    display: inline-block;
+    margin-left: 1%;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    width: 150px;
+    height: 150px;
+    box-shadow: 1px 1px 5px #A8A8A8, 1px 1px 5px #A8A8A8, 1px 1px 5px #A8A8A8, 1px 1px 5px #A8A8A8;
+    z-index: -5;
+    cursor: pointer;
+}
+.deporte:hover{
+    box-shadow: none;
+}
+.favorite{
+    width: 30px;
+    height: 30px;
+    margin-top: 5%;
+    margin-right: 5%;
+    float: right;
+    bottom: 0;
+    background-image: url('../img/like1.png');
+    background-size: cover;
+}
+.deporte1{
+    background-image: url('../img/deporte1.jpg');
+    background-size: cover;
+}
+.deporte2{
+    background-image: url('../img/deporte2.jpg');
+    background-size: cover;
+}
+.deporte3{
+    background-image: url('../img/deporte3.jpeg');
+    background-size: cover;
+}
+.deporte4{
+    background-image: url('../img/deporte4.jpg');
+    background-size: cover;
+}
+.deporte5{
+    background-image: url('../img/deporte5.jpg');
+    background-size: cover;
+}
+.deporte6{
+    background-image: url('../img/deporte6.jpg');
+    background-size: cover;
+}
+.deporte7{
+    background-image: url('../img/deporte7.jpg');
+    background-size: cover;
+}
+.deporte8{
+    background-image: url('../img/deporte8.jpeg');
+    background-size: cover;
+}
+.deporte9{
+    background-image: url('../img/deporte9.jpg');
+    background-size: cover;
+}
+.deporte10{
+    background-image: url('../img/deporte10.jpg');
+    background-size: cover;
+}
+.deporte11{
+    background-image: url('../img/deporte11.jpg');
+    background-size: cover;
+}
+.deporte12{
+    background-image: url('../img/deporte12.jpg');
+    background-size: cover;
+}
+.deporte13{
+    background-image: url('../img/deporte13.jpg');
+    background-size: cover;
+}
+.deporte14{
+    background-image: url('../img/deporte14.jpg');
+    background-size: cover;
+}
+.deporte15{
+    background-image: url('../img/deporte15.jpg');
+    background-size: cover;
+}
+.deporte16{
+    background-image: url('../img/deporte16.jpg');
+    background-size: cover;
+}
+.deporte17{
+    background-image: url('../img/deporte17.jpg');
+    background-size: cover;
+}
+.deporte18{
+    background-image: url('../img/deporte18.jpg');
+    background-size: cover;
+}
+.deporte19{
+    background-image: url('../img/deporte19.jpg');
+    background-size: cover;
+}
+.deporte20{
+    background-image: url('../img/deporte20.jpg');
+    background-size: cover;
+}
+.deporte21{
+    background-image: url('../img/deporte21.jpg');
+    background-size: cover;
+}
+.eventos{
+    margin-top: 5%;
+    margin-left: 3%;
+    margin-bottom: 5%;
+    width: 93%;
+    height: 300px !important;
+    background-color: rgba(245,245,245, 0.9);
+    box-shadow: 1px 1px 5px #A8A8A8, 1px 1px 5px #A8A8A8, 1px 1px 5px #A8A8A8, 1px 1px 5px #A8A8A8;
+}
+.eventosCabecera{
+    width: 100%;
+    height: 40px;
+    border-bottom: 0.3px solid #B8B8B8;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.eventosCabecera span{
+    font-size: 1.3em;
+    font-family: 'Montserrat', sans-serif;
+    color: #505050;
+}
+.eventosBody{
+    width: 100%;
+    height: 260px !important;
+    overflow-y: scroll;
+}
+.participacionEventos{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: rgba(0,0,0, 0.8);
+}
+.participacionEventos:hover{
+    background-color: rgba(120,120,120, 0.9);
+}
+.participacionEventos span{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    color: white;
+    width: 30%;
+}
+.participacionEventos .califica{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50% !important;
+}
+.estrella{
+    display: inline-block;
+    background-image: url('../img/star1.png');
+    background-size: cover;
+    width: 33px !important;
+    height: 33px !important;
+    cursor: pointer;
+}
+.selectedStar{
+    background-image: url('../img/star2.png') !important;
+    background-size: cover;
+}
+#perfilUsuario{
+    margin-bottom: 8%;
+}
+.perfil{
+    margin-left: 3%;
+    width: 93%;
+    height: 270px;
+    background-color: rgba(245,245,245, 0.9);
+    box-shadow: 1px 1px 5px #A8A8A8, 1px 1px 5px #A8A8A8, 1px 1px 5px #A8A8A8, 1px 1px 5px #A8A8A8;
+}
+.perfilCabecera{
+    width: 100%;
+    height: 40px;
+    border-bottom: 0.3px solid #B8B8B8;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.perfilCabecera span{
+    font-size: 1.3em;
+    font-family: 'Montserrat', sans-serif;
+    color: #505050;
+}
+.perfilBody{
+    width: 100%;
+    height: 75%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.fotoContainer, .datosUsuario{
+    height: 95%;
+    
+}
+.fotoContainer{
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;    
+    background-size: cover;
+    box-shadow: 1px 1px 5px #A8A8A8, 1px 1px 5px #A8A8A8, 1px 1px 5px #A8A8A8, 1px 1px 5px #A8A8A8;
+    cursor: pointer;
+}
+.fotoContainer:hover{
+    box-shadow: none;
+}
+.datosUsuario{
+    width: 80%;
+}
+.contendorSpanEditarFoto{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;  
+}
+.editarFoto{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url('../img/modificar.png');
+    background-size: cover;
+}
+#dialog-form{
+    width: 50%;
+    height: auto;
+    overflow-x: hidden;
+    background-color:#373a3d;
+}
+.datosUsuario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.datosUsuario div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.datos{
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    color: black;
+    cursor: pointer;
+}
+.datos:hover{
+    text-shadow: 1px 1px 5px white, 1px 1px 5px white, 1px 1px 5px white, 1px 1px 5px white;
+}
+p.datos{
+    
+}
+.datosUsuario div input, .datosUsuario div textarea{
+    display: none;
+    text-align: center;
+}
+textarea { 
+   resize:horizontal; 
+   width: 90%;
+   border-radius: 25px;
+   border: none;
+}
+.modificarDatos{
+    display: none;
+    background: transparent;
+    border: none;
+    border: 1px solid grey;
+    border-radius: 5px;
+    color: black;
+    font-size: 1.3em;
+    cursor: pointer;
+    padding: 5px;
+}
+.modificarDatos:hover{
+    background-color: black;
+    color: white;
+    
+}
+.ballicon{
+    display: inline-block;
+    background-image: url('../img/ballicon.png');
+    background-size: cover;
+    width: 30px;
+    height: 100%;
+}
+.datosUsuario div div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#eventosCercanos{
+    margin-bottom: 8%;
+}
+.eventosCeracanos{
+    margin-left: 3%;
+    width: 93%;
+    height: 380px;   
+    box-shadow: 1px 1px 5px #A8A8A8, 1px 1px 5px #A8A8A8, 1px 1px 5px #A8A8A8, 1px 1px 5px #A8A8A8;
+    margin-bottom: 5%;
+}
+.eventosCercanosCabecera{
+    width: 100%;
+    height: 40px;
+    border-bottom: 0.3px solid #B8B8B8;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(245,245,245, 0.9);
+}
+.eventosCercanosCabecera span{
+    font-size: 1.3em;
+    font-family: 'Montserrat', sans-serif;
+    color: #505050;
+}
+.eventosCercanosBody{
+    width: 100%;
+    height: auto;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.tablaEventosCercanos{
+    display: none;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0,0,0,0.6);
+    border: 2px solid black;
+    z-index: 30;
+    overflow-y: scroll;
+}
+.tablaEventosCercanos *{
+    text-align: center;
+}
+.tablaEventosCercanos table{
+    border-collapse: collapse;
+    width: 100%;
+}
+.tablaEventosCercanos table tr th{
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+}
+.apuntarse{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    cursor: pointer;
+}
+.hiddenInstalacion{
+    display: none;
+}
+#audo, #audio2{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    position: relative;
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-around;
+}
+footer div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;    
+}
+footer a{
+    text-decoration: none;
+    color: #B8B8B8;
+    font-style: italic;
+    font-size: 0.9em;
+    width: 40px;
+    height: 40px;
+}
+.facebook{
+    background-image: url('../img/face.png');
+    background-size: cover;
+}
+.twitter{
+    background-image: url('../img/twitter.png');
+    background-size: cover;
+}
+.instagram{
+    background-image: url('../img/insta.png');
+    background-size: cover;
+}
+.linkedin{
+    background-image: url('../img/link.png');
+    background-size: cover;
+}
+
+a, button, video {
+   outline: 0;
+}
+a:hover, a:active, button:focus, button:hover, button:active, button:focus, video:hover, video:active, video:focus   {
+  outline: 0 !important;
+}
+.fotoContainer{
+    background-position: center;
+}
+
+
+@media (max-width: 1150px){ 
+    #deporte, #instalacion, #pista, #nivel, #datepicker, #hora, #usuarios, #insertarEvento{
+        font-size: 0.8em;
+    }
+    .creaEventosBody .container select option{
+        font-size: 1em;
+    }
+    .participacionAbiertaEventos span{
+        font-size: 0.9em;
+    }
+    .deportesBody .deporte{
+        width: 120px;
+        height: 120px;
+    }
+    #nombreDeUsuario, #fechaNacimiento, #lugarUsuario{
+        font-size: 1em;
+    }
+    .nombreDeUsuario, .datepickerUsuario, .lugarUsuario{
+        width: 40%;
+        font-size: 0.8em;
+    }
+    
+    .ballicon{
+        background-position: center;
+        height: 40px;
+        width: 40px;
+    }
+    .participacionEventos span{
+        font-size: 0.9em;
+    }
+    .estrella{
+        width: 25px !important;
+        height: 25px !important;
+    }
+    .eventosAbiertos, .deportes, .perfil,  .eventos{
+        height: 300px;
+    }
+    #nombreUsuario{
+        font-size: 2em !important;
+    }
+    
+    
+}
+
+#deporte, #instalacion, #pista, #nivel, #datepicker, #hora, #usuarios, #insertarEvento{
+    padding: 0 !important;
+    width: 15% !important;
+}
+#deporte *, #instalacion *, #pista *, #nivel *{
+    background-color: rgba(0,0,0, 0.5);
+    color: white;
+}
+.creaEventos{
+    height: 350px;
+}
+@media (max-width: 1024px){ 
+    .creaEventos{
+        margin-top: 13% !important;
+    }
+}
+@media (max-width: 800px){ 
+    .creaEventos{
+        margin-top: 15% !important;
+        height: 250px !important;
+    }
+    #nav a{
+        font-size: 1em;
+    }
+    #deporte, #instalacion, #pista, #nivel, #datepicker, #hora, #usuarios, #insertarEvento{
+        width: 80% !important;
+        font-size: 0.7em;
+    }
+    .participacionAbiertaEventos span{
+        font-size: 0.6em;
+    }
+    .deportesBody .deporte{
+        width: 100px;
+        height: 100px;
+    }
+    #nombreDeUsuario, #fechaNacimiento, #lugarUsuario{
+        font-size: 0.6em;
+    }
+    .nombreDeUsuario, .datepickerUsuario, .lugarUsuario{
+        width: 45%;
+        font-size: 0.6em;
+    }
+    .ballicon{
+        background-position: center;
+        height: 40px;
+        width: 40px;
+    }
+    .participacionEventos span{
+        font-size: 0.6em;
+    }
+    .estrella{
+        width: 20px !important;
+        height: 20px !important;
+    }
+    .eventosAbiertos, .deportes, .perfil, .eventos{
+        height: 200px !important;
+    }
+    .eventosAbiertosBody, .deportesBody, .perfilBody, .eventosBody{
+        height: 160px !important;
+    }
+     #nombreUsuario{
+        font-size: 1.5em !important;
+    }
+    .opciones{
+        height: 20px;
+    }
+    .datosUsuario{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .datosUsuario div{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .descripcionUsuario{
+        height: 90%;
+        width: 70%;
+    }
+    .modificarDatos{
+        font-size: 0.9em;
+    }
+    .creaEventosBody{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .container *{
+        width: 90% !important;
+    }
+    .iconos{
+        width: 60px !important;
+        height: 60px !important;
+        left: 60%;
+        top: -50%;
+    }
+    .icon1, .icon2, .icon4{
+        display: none;
+    }
+}
+@media (max-width: 700px){ 
+    .creaEventos{
+        margin-top: 22% !important;        
+    }
+    header{
+        flex-direction: column;
+        box-shadow: 1px 1px 10px black;
+        align-items: center;
+        justify-content: space-between;
+        height:auto;
+    }
+    .eventosAbiertos, .eventos{
+        height: 180px;
+    }
+    #nombreUsuario{
+        font-size: 1em !important;
+    }
+}
+@media (max-width: 550px){ 
+    .creaEventos{
+        margin-top: 29% !important;
+        height: 200px !important;
+    }
+    #nombreUsuario{
+        font-size: 1em !important;
+    }
+    #nav{
+        justify-content: space-around;
+        width: 100%;
+    }
+    #nav a{
+        font-size: 1em;
+    }
+    header #logoHeader{
+        width: 75px;
+        height: 65px;
+    }
+}

@@ -1,0 +1,40 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 25-nov-2016, 10:07:48
+    Author     : eliana
+*/
+input.customInput{
+    margin-bottom: 0.5%;
+    margin-right: 0.3%;
+}
+div.page-header h1{
+    margin: 0px;
+    margin-bottom: 1%;
+}
+div.page-header{
+    margin-bottom: 0.5%;;
+}
+a.btn-warning{
+    margin-left: 5%;
+    margin-right: 15%;
+}
+table.table-hover{
+    margin-top: 1%;
+    width: 95%;
+}
+span.nombre{
+    font-weight: bold;
+}
+a.btn-primary{
+    float: right;
+}
+thead tr th{
+    cursor: pointer;
+}
+thead tr th:hover{
+    color: orange;
+}
