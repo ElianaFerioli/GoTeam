@@ -158,7 +158,7 @@ if(isset($_SESSION['facebook'])){
             <div id="formularioRegistroMovil">            
                 <form id="contenedorFormularioRegistroMovil" method="get" action="./Controller/registrarUsuario.php">
                     <div class="contenedorInput primero">
-                        <input required type="email" placeholder="usuario@usuario.com" name="emailUsuarioRegistro" >
+                        <input required type="email" placeholder="Correo electrónico" name="emailUsuarioRegistro" >
 
                     </div>
                     <div class="contenedorInput primero">

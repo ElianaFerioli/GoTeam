@@ -423,7 +423,7 @@ $(document).ready(function() {
             $("#emailUsuarioRegistro").focus();
         } else if(nombre==""){
             $("#nomUsuarioRegistro").focus();
-        } else if(pass=""){
+        } else if(pass==""){
             $("#passUsuarioRegistro").val();
         } else if(fecha==""){
             $("#datepicker").val();
